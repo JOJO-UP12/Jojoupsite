@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IronFit Gym - Votre salle de sport premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">IRON<span>FIT</span></div>
+        <button class="hamburger" id="hamburgerBtn">☰</button>
+        <nav id="mainNav">
+            <a href="#accueil" class="nav-link" data-page="home">Accueil</a>
+            <a href="#apropos" class="nav-link" data-page="about">À propos</a>
+            <a href="#services" class="nav-link" data-page="services">Services</a>
+            <a href="#programmes" class="nav-link" data-page="programs">Programmes</a>
+            <a href="#tarifs" class="nav-link" data-page="pricing">Tarifs</a>
+            <a href="#galerie" class="nav-link" data-page="gallery">Galerie</a>
+            <a href="#blog" class="nav-link" data-page="blog">Blog</a>
+            <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+            <button class="btn-nav" id="signupNavBtn">S'inscrire</button>
+            <button class="btn-nav" id="loginNavBtn">Se connecter</button>
+        </nav>
+        <div id="userInfo" class="user-info" style="display: none;">
+            <span class="user-name" id="userNameDisplay"></span>
+            <button class="logout-btn" id="logoutBtn">Déconnexion</button>
+        </div>
+    </div>
+</header>
+
+<main id="app">
+    <!-- PAGE ACCUEIL -->
+    <div id="home" class="page active-page">
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <h1>DÉPASSE TES LIMITES</h1>
+                <p>La meilleure salle de sport avec équipements premium, coaching pro et communauté motivante.</p>
+                <button class="btn-primary" id="heroJoinBtn">Rejoindre maintenant</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <section class="animate-on-scroll">
+                <h2 class="section-title">Nos services principaux</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Musculation</h3>
+                        <p>Machines dernier cri</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Cardio</h3>
+                        <p>Tapis, rameurs, vélos</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h3>Coaching pro</h3>
+                        <p>Suivi personnalisé</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll">
+                <h2 class="section-title">Pourquoi nous choisir ?</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-clock"></i>
+                        <h3>7j/7</h3>
+                        <p>Horaires flexibles</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-users"></i>
+                        <h3>Communauté</h3>
+                        <p>Esprit d'équipe</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Résultats garantis</h3>
+                        <p>Accompagnement</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="animate-on-scroll">
+                <h2 class="section-title">Témoignages</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Meilleure gym, résultats incroyables!"</p>
+                        <h4>- Laura</h4>
+                    </div>
+                    <div class="card">
+                        <div class="stars">★★★★★</div>
+                        <p>"Les coachs sont au top!"</p>
+                        <h4>- Marc</h4>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <button class="btn-primary" id="homeJoinBtn2">Rejoins l'aventure</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE À PROPOS -->
+    <div id="about" class="page">
+        <div class="container">
+            <section>
+                <h2 class="section-title">À propos de nous</h2>
+                <p class="about-text">IronFit est né en 2020 d'une passion : offrir une expérience fitness haut de gamme. Notre salle de 800m² est équipée des meilleures machines.</p>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Mission</h3>
+                        <p>Rendre le fitness accessible à tous</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-eye"></i>
+                        <h3>Vision</h3>
+                        <p>Devenir la référence fitness en Haïti</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Valeurs</h3>
+                        <p>Respect, dépassement, communauté</p>
+                    </div>
+                </div>
+
+                <h3 class="text-center" style="margin: 50px 0 30px;">Notre équipe</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <i class="fas fa-user-circle fa-3x"></i>
+                        <h3>Coach Sarah</h3>
+                        <p>Expertise 10 ans en musculation</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-circle fa-3x"></i>
+                        <h3>Coach Jordan</h3>
+                        <p>Spécialiste prise de masse</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-user-circle fa-3x"></i>
+                        <h3>Coach Mike</h3>
+                        <p>Expert en perte de poids</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- PAGE SERVICES -->
+    <div id="services" class="page">
+        <div class="container">
+            <h2 class="section-title">Nos services</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Musculation</h3>
+                    <p>Équipements premium</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-running"></i>
+                    <h3>Cardio</h3>
+                    <p>Zone cardio complète</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-spa"></i>
+                    <h3>Fitness</h3>
+                    <p>Cours collectifs</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h3>Coaching personnel</h3>
+                    <p>Suivi individualisé</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Perte de poids</h3>
+                    <p>Programme sur mesure</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Nutrition</h3>
+                    <p>Conseils alimentaires</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE PROGRAMMES -->
+    <div id="programs" class="page">
+        <div class="container">
+            <h2 class="section-title">Programmes d'entraînement</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Débutant</h3>
+                    <p>Apprentissage des mouvements de base</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Prise de masse</h3>
+                    <p>Hypertrophie intensive</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Perte de poids</h3>
+                    <p>Cardio + HIIT</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-smile"></i>
+                    <h3>Remise en forme</h3>
+                    <p>Énergie & bien-être</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Personnalisé</h3>
+                    <p>Sur mesure avec coach</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE TARIFS -->
+    <div id="pricing" class="page">
+        <div class="container">
+            <h2 class="section-title">Nos tarifs</h2>
+            <div class="cards-grid">
+                <div class="price-card">
+                    <h3>Journalier</h3>
+                    <div class="price">5€</div>
+                    <button class="btn-primary pay-btn" data-plan="Journalier">Payer maintenant</button>
+                </div>
+                <div class="price-card">
+                    <h3>Mensuel</h3>
+                    <div class="price">35€</div>
+                    <button class="btn-primary pay-btn" data-plan="Mensuel">Payer maintenant</button>
+                </div>
+                <div class="price-card">
+                    <h3>Trimestriel</h3>
+                    <div class="price">90€</div>
+                    <button class="btn-primary pay-btn" data-plan="Trimestriel">Payer maintenant</button>
+                </div>
+                <div class="price-card">
+                    <h3>Annuel</h3>
+                    <div class="price">299€</div>
+                    <button class="btn-primary pay-btn" data-plan="Annuel">Payer maintenant</button>
+                </div>
+            </div>
+
+            <div class="natcash-badge animate-on-scroll">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Paiement rapide sécurisé - Natcash</h3>
+                <p><strong>Nom du compte : JOJOUP</strong><br>Numéro Natcash : 33915778<br>Email : jordensleyp@gmail.com</p>
+                <p class="info-text">💡 Après paiement, envoyez la confirmation pour activer votre abonnement.</p>
+                <button id="copyNatcashBtn" class="btn-secondary">📋 Copier infos Natcash</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE GALERIE -->
+    <div id="gallery" class="page">
+        <div class="container">
+            <h2 class="section-title">Galerie</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=300&fit=crop" alt="Salle de sport">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534258936925-58eccfb0dbd2?w=400&h=300&fit=crop" alt="Équipements">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=400&h=300&fit=crop" alt="Membres">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&h=300&fit=crop" alt="Cardio">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=300&fit=crop" alt="Musculation">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=400&h=300&fit=crop" alt="Cours collectif">
+                </div>
+            </div>
+            <div class="video-section">
+                <h3>Vidéos d'entraînement</h3>
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Découvrez nos routines exclusives sur YouTube</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE BLOG -->
+    <div id="blog" class="page">
+        <div class="container">
+            <h2 class="section-title">Blog fitness</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>5 conseils nutrition</h3>
+                    <p>Protéines, glucides, lipides - tout ce qu'il faut savoir pour bien manger.</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Entraînement HIIT efficace</h3>
+                    <p>Brûle graisses en 20min avec notre méthode exclusive.</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bed"></i>
+                    <h3>Récupération musculaire</h3>
+                    <p>Étirements, sommeil et techniques de récupération.</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-water"></i>
+                    <h3>Hydratation et performance</h3>
+                    <p>L'importance de l'eau dans vos entraînements.</p>
+                    <a href="#" class="read-more">Lire la suite →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE CONTACT -->
+    <div id="contact" class="page">
+        <div class="container">
+            <h2 class="section-title">Contactez-nous</h2>
+            <div class="contact-wrapper">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Nom complet" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Téléphone">
+                        <textarea rows="5" placeholder="Votre message"></textarea>
+                        <button type="submit" class="btn-primary">Envoyer le message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+509 3391 5778</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>jordensleyp@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>Rue principale, Port-au-Prince, Haïti</p>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <span>Google Maps - IronFit Gym</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE INSCRIPTION/CONNEXION -->
+    <div id="signup" class="page">
+        <div class="container">
+            <div class="auth-container" id="authFormContainer"></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">IRON<span>FIT</span></div>
+                <p>Votre transformation commence ici.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-phone"></i> +509 3391 5778</p>
+                <p><i class="fas fa-envelope"></i> jordensleyp@gmail.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens rapides</h4>
+                <a href="#" data-page="pricing">Tarifs</a>
+                <a href="#" data-page="contact">Contact</a>
+                <a href="#" data-page="about">À propos</a>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 IronFit Gym - Tous droits réservés | Paiement sécurisé Natcash ✅</p>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL ABONNEMENT -->
+<div id="subscriptionModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3><i class="fas fa-dumbbell"></i> Intégrer IronFit Gym</h3>
+        <p>Félicitations pour votre inscription !</p>
+        <p>Pour <strong>intégrer la salle physiquement</strong>, vous devez choisir un abonnement :</p>
+        <div class="modal-plans">
+            <div class="modal-plan">
+                <h4>Journalier</h4>
+                <div class="price">5€</div>
+                <button class="btn-primary pay-modal" data-plan="Journalier">Choisir</button>
+            </div>
+            <div class="modal-plan">
+                <h4>Mensuel</h4>
+                <div class="price">35€</div>
+                <button class="btn-primary pay-modal" data-plan="Mensuel">Choisir</button>
+            </div>
+            <div class="modal-plan">
+                <h4>Trimestriel</h4>
+                <div class="price">90€</div>
+                <button class="btn-primary pay-modal" data-plan="Trimestriel">Choisir</button>
+            </div>
+            <div class="modal-plan">
+                <h4>Annuel</h4>
+                <div class="price">299€</div>
+                <button class="btn-primary pay-modal" data-plan="Annuel">Choisir</button>
+            </div>
+        </div>
+        <p class="modal-note">💡 Vous pouvez aussi prendre un abonnement plus tard via la page Tarifs.</p>
+        <button id="skipSubscriptionBtn" class="btn-secondary">Je prendrai un abonnement plus tard</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+                                                   </html>
